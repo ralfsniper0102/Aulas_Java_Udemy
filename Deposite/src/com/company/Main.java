@@ -40,14 +40,29 @@ public class Main {
         System.out.println("Dados da conta:");
         System.out.println(x.ToString());
 
-        System.out.println("Entre com o valor de saque de dinheiro");
-        x.WithdrawMoney(sc.nextDouble());
+        int key = 0;
+
+        do {
+            System.out.println("Entre com o valor de saque de dinheiro");
+            double checker = sc.nextDouble();
+
+            if (checker > x.getBalance()) {
+                System.out.println("Valor acima do existente em conta");
+            } else {
+                x.WithdrawMoney(checker);
+                key = 1;
+            }
+
+
+        } while (key == 0);
+
 
         System.out.println("Dados da conta:");
         System.out.println(x.ToString());
 
 
     }
+
     private static void clearBuffer(Scanner scanner) {
         if (scanner.hasNextLine()) {
             scanner.nextLine();
