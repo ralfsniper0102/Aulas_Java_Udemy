@@ -27,12 +27,14 @@ public class Main {
         }
 
         System.out.print("Entre como o id do empregado para dar aumento de salario: ");
-        double increase = sc.nextDouble();
+        int increase = sc.nextInt();
 
-        if(increase == employes.stream().filter(x -> x )){
+        Employee result = employes.stream().filter(x -> x.Id == increase).findFirst().orElse(null);
+
+        if (result.Id != null){
+            System.out.print("entre com o valor em porcentagem: ");
 
         }
-
 
         sc.close();
     }

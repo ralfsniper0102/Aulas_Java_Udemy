@@ -9,6 +9,10 @@ public class Employee {
         Id = id;
         Name = name;
         Salary = salary;
-    }
+   }
+
+   public void Increase(){
+
+   }
 
 }
