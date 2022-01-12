@@ -11,8 +11,9 @@ public class Employee {
         Salary = salary;
    }
 
-   public void Increase(){
+    public void Increase(double percent){
+        Salary = Salary + (Salary * (percent/100));
 
-   }
+    }
 
 }
